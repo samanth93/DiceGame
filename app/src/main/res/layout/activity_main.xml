@@ -27,44 +27,99 @@
             app:srcCompat="@drawable/dicee_logo" />
 
         <LinearLayout
+            android:id="@+id/v_btn_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="300dp"
+            android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/left_dice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:contentDescription="@string/dice"
-                app:srcCompat="@drawable/dice3" />
+                android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/right_dice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
+                <ImageView
+                    android:id="@+id/top_dice"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/dice"
+                    app:srcCompat="@drawable/dice3" />
+
+                <TextView
+                    android:id="@+id/computer_text"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_weight="1"
+                    android:text="@string/computer"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:contentDescription="@string/dice"
-                app:srcCompat="@drawable/dice4" />
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/bottom_dice"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/dice"
+                    app:srcCompat="@drawable/dice4" />
+
+                <TextView
+                    android:id="@+id/user_text"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_weight="1"
+                    android:text="@string/user"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/winner_string"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:text="@string/computer_is_the_winner" />
+
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/btn_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="horizontal"
+            android:textAlignment="center">
 
             <Button
-                android:id="@+id/roll_button"
+                android:id="@+id/lower_btn_roll"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
                 android:layout_gravity="center"
                 android:background="#00BCD4"
-                android:text="@string/btn"
+                android:text="@string/btn_lower_roll"
                 android:textSize="20sp"
                 app:backgroundTint="#00BCD4" />
+
+            <Button
+                android:id="@+id/higher_btn_roll"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:background="#00BCD4"
+                android:text="@string/btn_higher_roll"
+                android:textSize="20sp"
+                app:backgroundTint="#00BCD4" />
+
         </LinearLayout>
 
     </LinearLayout>

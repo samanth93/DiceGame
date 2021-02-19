@@ -2,5 +2,10 @@
     <string name="app_name">DiceGame</string>
     <string name="description_logo">Los vegas logo</string>
     <string name="dice">Dice</string>
-    <string name="btn">Roll</string>
+    <string name="btn_higher_roll">higher</string>
+    <string name="btn_lower_roll">lower</string>
+    <string name="computer">Computer</string>
+    <string name="user">User</string>
+    <string name="computer_is_the_winner">Computer is the winner</string>
+    <string name="winner_string">Comouter is the winner</string>
 </resources>

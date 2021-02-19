@@ -16,28 +16,41 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 //        we have two images left dice and right dice
-        ImageView leftDice = findViewById(R.id.left_dice);
-        ImageView rightDice = findViewById(R.id.right_dice);
-        Button rollButton = findViewById(R.id.roll_button);
+        ImageView topDice = findViewById(R.id.top_dice);
+        ImageView bottomDice = findViewById(R.id.bottom_dice);
+        Button rollHigherButton = findViewById(R.id.higher_btn_roll);
+        Button rollLowerButton = findViewById(R.id.lower_btn_roll);
         int[] diceArray = {R.drawable.dice1,
                 R.drawable.dice2,
                 R.drawable.dice3,
                 R.drawable.dice4,
                 R.drawable.dice5,
                 R.drawable.dice6};
-//    we want to pick random value from array and replace it with left and right view
-        rollButton.setOnClickListener(new View.OnClickListener(){
+//    click on higher button
+        rollHigherButton.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 Random rand = new Random();
-                int randLeftDie = rand.nextInt(6);
-                int randRightDie = rand.nextInt(6);
-                Log.d("left die", String.valueOf(randLeftDie));
-                Log.d("right die", String.valueOf(randRightDie));
-                leftDice.setImageResource(diceArray[randLeftDie]);
-                rightDice.setImageResource(diceArray[randRightDie]);
+                int randTopDie = rand.nextInt(6);
+                int randBottomDie = rand.nextInt(6);
+                Log.d("left die", String.valueOf(randTopDie));
+                Log.d("right die", String.valueOf(randBottomDie));
+                topDice.setImageResource(diceArray[randTopDie]);
+                bottomDice.setImageResource(diceArray[randBottomDie]);
             }
         });
-
+//        click on lower button
+        rollLowerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Random rand = new Random();
+                int randTopDie = rand.nextInt(6);
+                int randBottomDie = rand.nextInt(6);
+                Log.d("left die", String.valueOf(randTopDie));
+                Log.d("right die", String.valueOf(randBottomDie));
+                topDice.setImageResource(diceArray[randTopDie]);
+                bottomDice.setImageResource(diceArray[randBottomDie]);
+            }
+        });
     }
 }
