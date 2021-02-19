@@ -90,10 +90,11 @@
                 android:layout_height="250dp"
                 android:layout_margin="20dp"
                 android:layout_weight="1"
-                android:shadowColor="#46FFFCFF"
+                android:fontFamily="@font/alegreya_black_italic"
+                android:shadowColor="@color/white"
                 android:text="@string/winner_string"
-                android:textColor="#FFFFFF"
-                android:textSize="30sp" />
+                android:textColor="@color/black"
+                android:textSize="40sp" />
 
         </LinearLayout>
 

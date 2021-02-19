@@ -39,13 +39,13 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("right die", String.valueOf(randBottomDie));
                 if(randTopDie > randBottomDie){
                     Log.d("Higher Button", "Computer Won");
-                    winnerString.setText("Result: Computer Won");
+                    winnerString.setText("COMPUTER WIN!");
                 }else if(randTopDie == randBottomDie){
                     Log.d("Higher Button", "Tie");
-                    winnerString.setText("Result: Tie");
+                    winnerString.setText("IT'S A TIE");
                 }else{
                     Log.d("Higher Button", "User Won");
-                    winnerString.setText("Result: User Won");
+                    winnerString.setText("USER WIN!");
                 }
                 topDice.setImageResource(diceArray[randTopDie]);
                 bottomDice.setImageResource(diceArray[randBottomDie]);
@@ -62,13 +62,13 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("right die", String.valueOf(randBottomDie));
                 if(randTopDie > randBottomDie){
                     Log.d("Higher Button", "User Won");
-                    winnerString.setText("Result: User Won");
+                    winnerString.setText("USER WIN!");
                 }else if(randTopDie == randBottomDie){
                     Log.d("Higher Button", "Tie");
-                    winnerString.setText("Result: Tie");
+                    winnerString.setText("IT'S A TIE");
                 }else{
                     Log.d("Higher Button", "Computer Won");
-                    winnerString.setText("Result: Computer Won");
+                    winnerString.setText("COMPUTER WIN!");
                 }
                 topDice.setImageResource(diceArray[randTopDie]);
                 bottomDice.setImageResource(diceArray[randBottomDie]);
