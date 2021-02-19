@@ -6,6 +6,5 @@
     <string name="btn_lower_roll">lower</string>
     <string name="computer">Computer</string>
     <string name="user">User</string>
-    <string name="computer_is_the_winner">Computer is the winner</string>
-    <string name="winner_string">Comouter is the winner</string>
+    <string name="winner_string">Result: </string>
 </resources>

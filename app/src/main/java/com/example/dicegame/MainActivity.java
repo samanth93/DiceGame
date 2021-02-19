@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.Random;
 
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         ImageView bottomDice = findViewById(R.id.bottom_dice);
         Button rollHigherButton = findViewById(R.id.higher_btn_roll);
         Button rollLowerButton = findViewById(R.id.lower_btn_roll);
+        TextView winnerString = findViewById(R.id.winner_string);
         int[] diceArray = {R.drawable.dice1,
                 R.drawable.dice2,
                 R.drawable.dice3,
@@ -35,6 +37,16 @@ public class MainActivity extends AppCompatActivity {
                 int randBottomDie = rand.nextInt(6);
                 Log.d("left die", String.valueOf(randTopDie));
                 Log.d("right die", String.valueOf(randBottomDie));
+                if(randTopDie > randBottomDie){
+                    Log.d("Higher Button", "Computer Won");
+                    winnerString.setText("Result: Computer Won");
+                }else if(randTopDie == randBottomDie){
+                    Log.d("Higher Button", "Tie");
+                    winnerString.setText("Result: Tie");
+                }else{
+                    Log.d("Higher Button", "User Won");
+                    winnerString.setText("Result: User Won");
+                }
                 topDice.setImageResource(diceArray[randTopDie]);
                 bottomDice.setImageResource(diceArray[randBottomDie]);
             }
@@ -48,6 +60,16 @@ public class MainActivity extends AppCompatActivity {
                 int randBottomDie = rand.nextInt(6);
                 Log.d("left die", String.valueOf(randTopDie));
                 Log.d("right die", String.valueOf(randBottomDie));
+                if(randTopDie > randBottomDie){
+                    Log.d("Higher Button", "User Won");
+                    winnerString.setText("Result: User Won");
+                }else if(randTopDie == randBottomDie){
+                    Log.d("Higher Button", "Tie");
+                    winnerString.setText("Result: Tie");
+                }else{
+                    Log.d("Higher Button", "Computer Won");
+                    winnerString.setText("Result: Computer Won");
+                }
                 topDice.setImageResource(diceArray[randTopDie]);
                 bottomDice.setImageResource(diceArray[randBottomDie]);
             }

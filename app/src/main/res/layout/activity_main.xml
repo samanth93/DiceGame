@@ -38,6 +38,15 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
+                <TextView
+                    android:id="@+id/computer_text"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_weight="1"
+                    android:text="@string/computer"
+                    android:textSize="30sp" />
+
                 <ImageView
                     android:id="@+id/top_dice"
                     android:layout_width="150dp"
@@ -47,14 +56,6 @@
                     android:contentDescription="@string/dice"
                     app:srcCompat="@drawable/dice3" />
 
-                <TextView
-                    android:id="@+id/computer_text"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
-                    android:layout_weight="1"
-                    android:text="@string/computer"
-                    android:textSize="30sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -62,6 +63,15 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/user_text"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_weight="1"
+                    android:text="@string/user"
+                    android:textSize="30sp" />
 
                 <ImageView
                     android:id="@+id/bottom_dice"
@@ -72,22 +82,18 @@
                     android:contentDescription="@string/dice"
                     app:srcCompat="@drawable/dice4" />
 
-                <TextView
-                    android:id="@+id/user_text"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
-                    android:layout_weight="1"
-                    android:text="@string/user"
-                    android:textSize="30sp" />
             </LinearLayout>
 
             <TextView
                 android:id="@+id/winner_string"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="250dp"
+                android:layout_margin="20dp"
                 android:layout_weight="1"
-                android:text="@string/computer_is_the_winner" />
+                android:shadowColor="#46FFFCFF"
+                android:text="@string/winner_string"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp" />
 
         </LinearLayout>
 
@@ -95,6 +101,7 @@
             android:id="@+id/btn_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="20dp"
             android:orientation="horizontal"
             android:textAlignment="center">
 
@@ -104,6 +111,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
                 android:layout_gravity="center"
+                android:layout_margin="30dp"
                 android:background="#00BCD4"
                 android:text="@string/btn_lower_roll"
                 android:textSize="20sp"
@@ -115,6 +123,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
                 android:layout_gravity="center"
+                android:layout_margin="30dp"
                 android:background="#00BCD4"
                 android:text="@string/btn_higher_roll"
                 android:textSize="20sp"
